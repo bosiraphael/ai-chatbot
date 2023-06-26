@@ -9,8 +9,8 @@ export default function Chat() {
     <div>
       <div className="p-5 h-64 overflow-y-scroll bg-white rounded-md shadow-md">
         {messages.map((m) => (
-          <div key={m.id}>
-            {m.role}: {m.content}
+          <div key={m.id} className="mb-2">
+            {m.role === "assistant" ? "🤖" : "👤"} : {m.content}
           </div>
         ))}
       </div>
