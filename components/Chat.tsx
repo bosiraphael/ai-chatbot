@@ -6,8 +6,8 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div>
-      <div className="p-5 h-64 overflow-y-scroll bg-white rounded-md shadow-md">
+    <div className="w-full max-w-xl">
+      <div className="p-10 h-80 overflow-y-scroll bg-white rounded-md shadow-md text-justify">
         {messages.map((m) => (
           <div key={m.id} className="mb-2">
             {m.role === "assistant" ? "🤖" : "👤"} : {m.content}
